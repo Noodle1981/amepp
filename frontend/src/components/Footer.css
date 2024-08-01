@@ -1,0 +1,65 @@
+.footer {
+    width: 100%;
+    text-align: center;
+}
+
+.boxprincipal {
+    margin-bottom: 1vh;;
+}
+
+.contacto {
+    display: flex;
+    justify-content:center;
+    color: white;
+    margin-bottom: 2vh;
+}
+
+.col-datos {
+    background-color: #AFC82A;
+    padding: 1vh;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card1 {
+    background-color: #7c1d53 ;
+    border-radius: 5px;
+    padding: 1vh;
+    margin: 1vh;;
+}
+
+.card2 {
+    background-color: #6f427d;
+    border-radius: 5px;
+    padding: 1vh;
+    margin: 1vh;;
+}
+
+.list-redes-sociales li {
+    list-style: none;
+    margin-left: 10px;
+}
+
+.col-maps {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border-radius: 5px;
+    flex-direction: column;
+    background-color: #AFC82A;
+    padding: 1vh;
+    margin: 1vh;
+}
+
+.derechos-reservados{
+    width: 100%;
+    background-color:#AFC82A;
+    border-radius: 5px;
+}
+
+.col-maps h5 {
+    display: flex;
+    justify-content: center;
+    
+}

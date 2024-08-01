@@ -1,0 +1,96 @@
+.navbar {
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    width: 150px;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: #49557e;
+    font-size: 18px;
+}
+
+.navbar li {
+    cursor: pointer;
+    position: relative;
+}
+
+.navbar li a,
+.navbar li span {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid orange;
+}
+
+.navbar button {
+    background-color: transparent;
+    font-size: 16px;
+    color: rgb(64, 6, 97);
+    border: 1px solid rgb(40, 189, 230);
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar button:hover {
+    background-color: rgb(40, 189, 230);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Fondo transparente */
+    backdrop-filter: blur(10px);
+    /* Efecto de desenfoque */
+    -webkit-backdrop-filter: blur(10px);
+    /* Efecto de desenfoque para Safari */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    /* Eliminar los puntos de la lista */
+    padding: 0;
+    /* Eliminar el padding por defecto */
+    margin: 0;
+    /* Eliminar el margin por defecto */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* Borde transparente */
+}
+
+.dropdown-content li {
+    float: none;
+}
+
+.dropdown-content li a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    color: #49557e;
+}
+
+.dropdown-content li a:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Fondo transparente al pasar el ratón */
+}
+
+.navbar-menu li:hover .dropdown-content {
+    display: block;
+}
