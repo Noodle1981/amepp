@@ -1,35 +1,22 @@
-import React from 'react';
+JavaScript
 
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import News from './pages/News';
-import Benefits from './pages/Benefits';
-import Contact from './pages/Contact';
-import Pharmacy from './pages/Services/Pharmacy';
-import Optics from './pages/Services/Optics';
-import Workshops from './pages/Services/Workshops';
-import Trips from './pages/Services/Trips';
-import Footer from './components/Footer';
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  const formData = new FormData();
+  formData.append('titulo', titulo);
+  formData.append('imagen', imagen);
+  formData.append('texto', texto);
+  formData.append('seccion', seccion);
 
-const App = () => {
-  return (
-    <div className='app'>
-      <Navbar />
-      <Router>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/news' element={<News />} />
-          <Route path='/pharmacy' element={<Pharmacy />} />
-          <Route path='/optics' element={<Optics />} />
-          <Route path='/workshops' element={<Workshops />} />
-          <Route path='/trips' element={<Trips />} />
-          <Route path='/benefits' element={<Benefits />} />
-          <Route path='/contact' element={<Contact />} />
-        </Routes>
-      </Router>
-      <Footer />
-    </div>
-  );
+  try {
+    await axios.post('http://localhost:3001/entradas', formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    });
+    alert('Entrada creada exitosamente');
+  } catch (error) {
+    console.error('Error al crear la entrada:', error);
+    alert('Hubo un error al crear la entrada');
+  }
 };
-
-export default App;

@@ -1,31 +1,39 @@
 import React from "react";
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import News from "./pages/News";
-import Pharmacy from "./pages/Services/Pharmacy";
-import Optics from "./pages/Services/Optics";
+import Health from "./pages/Services/Health";
 import Trips from "./pages/Services/Trips";
 import Workshops from "./pages/Services/Workshops";
 import Benefits from "./pages/Benefits";
-import Contact from "./pages/Contact";
+import Join from "./pages/Join";
+import Login from "./pages/Login";
+import Administracion from "./pages/Administracion.";
+
 
 function App() {
+  const location = useLocation();
+  const hideNavbarFooter = location.pathname === "/administracion";
+
+
+
   return (
     <div className="app">
-      <Navbar />
+     {!hideNavbarFooter && <Navbar />}
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path="/news" element={<News />} />
-        <Route path="/pharmacy" element={<Pharmacy />} />
-        <Route path="/optics" element={<Optics />} />
+        <Route path="/health" element={<Health />} />
         <Route path="/trips" element={<Trips />} />
         <Route path="/workshops" element={<Workshops />} />
         <Route path="/benefits" element={<Benefits />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/join" element={<Join />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="Administracion" element={<Administracion />} />
       </Routes>
-      <Footer />
+      {!hideNavbarFooter && <Footer />}
     </div>
   );
 }

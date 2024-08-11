@@ -1,0 +1,77 @@
+:root {
+    --color-naranja: #ff9c1a;
+    --color-turquesa: #45c2f0;
+    --color-rosadofluo: #dc0c53;
+    --color-morado: #8a1066;
+    --color-lilaclaro: #734680;
+    --color-verdepasto: #a7c416;
+    --color-oscuro: #0000;
+}
+
+.join {
+display: flex;
+justify-content: center;
+margin: 1rem;
+}
+
+.join-cartel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 20px;
+    background-color:var(--color-lilaclaro);
+    border-radius: 1rem;
+    box-shadow: 1px 8px 30px var(--color-turquesa);
+}
+
+.card-title {
+    background-color: var(--color-turquesa);
+    font-size: 1.5rem;
+    padding: 3%;
+    margin: 3%;
+    border-radius: 1rem;
+    box-shadow: 1px 8px 30px var(--color-turquesa);
+    
+}
+
+.join-cartel h4 {
+    font-size: 1.2rem;
+    margin: 10px;
+    color: white;
+    
+}
+
+.join-cartel p {
+    font-size: 1.2rem;
+    margin: 10px;
+    color: white;
+}
+
+.join-cartel li {
+    font-size: 1.2rem;
+    margin: 5px;
+    color: white;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: black; /* Color del texto */
+    background-color: rgba(11, 169, 228, 0.7); /* Color turquesa con transparencia */
+    border: 2px solid var(--color-turquesa); /* Borde del mismo color pero sin transparencia */
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+    font-size: 2rem;
+    margin: 25px;
+
+}
+
+.btn:hover {
+    background-color: rgba(11, 169, 228, 1); /* Color turquesa sólido al pasar el ratón */
+    color: white; /* Cambia el color del texto a blanco al pasar el ratón */
+    box-shadow: 0 4px 10px var(--color-turquesa); /* Efecto de sombra al pasar el ratón */
+}
